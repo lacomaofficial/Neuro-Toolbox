@@ -1,4 +1,4 @@
-# Neuro-Toolkit
+# Neuro-Toolbox
 
 A curated collection of tutorials, templates, and reusable frameworks for EEG signal processing, fMRI machine learning, and psychometric assessment.
 
