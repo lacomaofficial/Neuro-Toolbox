@@ -2,7 +2,6 @@
 
 A curated collection of tutorials, templates, and reusable frameworks for EEG signal processing, fMRI machine learning, and psychometric assessment.
 
-**For** graduate students, researchers, and anyone teaching or learning machine learning applied to neuroimaging.
 
 <br>
 
