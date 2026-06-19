@@ -6,8 +6,9 @@ A curated collection of tutorials, templates, and reusable frameworks for EEG si
 <br>
 
 ### EEG
-- **Preprocessing pipeline**: 4-step walkthrough using MEEGKit (ASR, STAR, SNS) and ICLabel for automatic artifact removal
-- **Artifact detection**: Notebooks for identifying artifacts in scalp EEG and intracranial LFP recordings
+- **Preprocessing framework**: 4-step walkthrough using MEEGKit (ASR, STAR, SNS) and ICLabel for automatic artifact removal
+- **Lfp extraction**: Extracting and analyzing Local Field Potential (LFP) data from MATLAB files.
+- **Artifact alignment**: Identifying DBS artifacts in scalp EEG and intracranial LFP recordings
 - **Machine learning**: XGBoost-based feature extraction and classification on EEG-derived features
 
 ### fMRI
@@ -26,6 +27,7 @@ A curated collection of tutorials, templates, and reusable frameworks for EEG si
 |---------|-------------|
 | [`xeeg_kit`](https://github.com/cimt-unia/xeeg_kit) | HD-EEG artifact removal pipeline |
 | [`lcmv_xtra`](https://github.com/cimt-unia/lcmv_xtra) | LCMV beamforming and source connectivity |
+| [`lcmv_stats`](https://github.com/cimt-unia/lcmv_stats) | Statistical analysis on CIMT Atlas|
 | [`gt_map`](https://github.com/cimt-unia/gt_map) | Glasser+Tian fMRI parcellation |
 
 <br>
