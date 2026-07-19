@@ -64,7 +64,7 @@ voxel_size = np.abs(np.diag(ref_affine)[:3])  # [1.0, 1.0, 1.0]
 
 <br>
 
-## Part 2: Glasser + Tian — The Offset Strategy
+## Part 2: Glasser + Tian
 
 ### Why Not Just Add the Labels?
 
@@ -108,7 +108,7 @@ This checks every voxel: "Does Tian have a label here?" If yes, use Tian's label
 
 <br>
 
-## Part 3: Nettekoven — A Different Shape, Same Principle
+## Part 3: Nettekoven
 
 Nettekoven is `(153, 103, 84)` at 1mm. It only covers the cerebellum, so it's a smaller grid embedded in a different corner of MNI space. When we resample to Glasser's `(182, 218, 182)`, all voxels outside the cerebellum become 0 automatically.
 
