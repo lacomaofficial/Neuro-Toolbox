@@ -1,6 +1,6 @@
-# Merge Atlas Framework
+# Atlas Framework
 
----
+<br>
 
 ## Part 1: The Reference Space 
 
@@ -62,7 +62,7 @@ Metadata: voxel dimensions, data type, coordinate system codes (sform/qform tell
 voxel_size = np.abs(np.diag(ref_affine)[:3])  # [1.0, 1.0, 1.0]
 ```
 
----
+<br>
 
 ## Part 2: Glasser + Tian — The Offset Strategy
 
@@ -106,7 +106,7 @@ gt_data = np.where(tian_data > 0, tian_data, glasser_data)
 
 This checks every voxel: "Does Tian have a label here?" If yes, use Tian's label. If no, use Glasser's. Since Glasser covers cortex and Tian covers subcortex, they occupy different voxels. The `where` statement handles the rare boundary overlap.
 
----
+<br>
 
 ## Part 3: Nettekoven — A Different Shape, Same Principle
 
@@ -124,7 +124,7 @@ Original Nettekoven grid:        Resampled to Glasser grid:
 
 The offset is +414, so Nettekoven labels 1-32 become 415-446.
 
----
+<br>
 
 ## Part 4: STN Spheres
 
@@ -210,7 +210,7 @@ X=85  │   .   .   .   .   .   .   .   .   .   .   .   .   .
 
 The ● marks voxel (79, 112, 67) — the exact MNI coordinate. The 447s form a circle of radius 5 voxels. Because each voxel is 1mm, this is exactly a 5mm radius sphere.
 
----
+<br>
 
 ## Part 5: Merge & Validate
 
@@ -248,7 +248,7 @@ extra = unique_labels - expected
 
 We check: do we have exactly labels 1 through 448 with no gaps and no extras? If `missing` or `extra` is non-empty, something went wrong.
 
----
+<br>
 
 ## Part 6: Save 
 
@@ -263,7 +263,7 @@ combined_img = nib.Nifti1Image(combined, ref_affine, glasser_img.header)
 
 The result is a single `.nii.gz` file. When you later call `nib.load("CIMT_448ROIs_atlas.nii.gz")`, you get back the exact same 3D array with the exact same coordinate transform. The CSV maps each integer 1-448 to a human-readable name, hemisphere, and functional system.
 
----
+<br>
 
 ## Diagram
 
