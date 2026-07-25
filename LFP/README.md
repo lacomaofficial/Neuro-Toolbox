@@ -5,7 +5,7 @@
 A Python toolkit for preprocessing intracranial Local Field Potential (LFP) data with specific safeguards for preserving Delta-band (0.5–4 Hz) neural oscillations during EKG artifact removal. Originally translated from a Medtronic QRST template subtraction MATLAB script, this implementation adds critical protections against Delta destruction that are necessary for single-channel deep brain recordings.
 
 
-## Pipeline Overview
+## Framework
 
 ```
 Raw FIF
