@@ -1,18 +1,9 @@
-# **Pre-processing toolkit for single-channel LFP recordings.**
+# LFP xkit
+
+**Pre-processing toolkit for single-channel LFP recordings.**
 
 A Python toolkit for preprocessing intracranial Local Field Potential (LFP) data with specific safeguards for preserving Delta-band (0.5–4 Hz) neural oscillations during EKG artifact removal. Originally translated from a Medtronic QRST template subtraction MATLAB script, this implementation adds critical protections against Delta destruction that are necessary for single-channel deep brain recordings.
 
-## Why This Exists
-
-Standard EKG removal methods (ICA, regression, interpolation) assume multi-channel redundancy or high signal-to-noise ratios. Single-channel DBS LFP violates both assumptions:
-
--   **No reference channels** → ICA/regression impossible
--   **EKG amplitude ≈ neural amplitude** → Fixed thresholds fail
--   **T-wave occupies Delta band** → Standard QRST subtraction destroys 40–50% of neural Delta
--   **Baseline offset fitting** → Absorbs genuine slow oscillations across 70–90+ subtractions
--   **Template averaging** → Embeds phase-locked Delta into the QRS model itself
-
-`lfp_xkit` solves all five problems with three integrated safeguards plus spectral dead-segment reconstruction.
 
 ## Pipeline Overview
 
