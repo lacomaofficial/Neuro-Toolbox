@@ -1,5 +1,8 @@
 # iMat: A Toolkit for Extracting Matlab Files in Python
 
+
+<b>
+  
 ## Overview
 
 **iMat** is a Python toolkit designed for exploring, extracting, and analyzing intracranial EEG (iEEG) data from Parkinson's Disease (PD) patients. It provides utilities for working with two primary data formats:
@@ -10,7 +13,7 @@ The toolkit handles common challenges in clinical iEEG data, including NaN inter
 
 
 
----
+<b>
 
 ## Quick Start
 
@@ -122,7 +125,8 @@ metrics = compute_quality_metrics(data, sfreq)
 - `theta_power`: Mean power in theta band (4-8 Hz)
 - `beta_theta_ratio`: Ratio of beta to theta power
 
----
+
+<b>
 
 ## Example Workflows
 
@@ -157,7 +161,8 @@ from imat import example_rcs_extraction
 example_rcs_extraction()
 ```
 
----
+
+<b>
 
 ## Key Features
 
@@ -181,7 +186,8 @@ example_rcs_extraction()
 - Coherence plots with statistical summaries
 - Customizable titles, labels, and display parameters
 
----
+
+<b>
 
 ## API Reference
 
