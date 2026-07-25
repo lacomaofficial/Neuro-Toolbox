@@ -2,7 +2,7 @@
 
 **Pre-processing toolkit for single-channel LFP recordings.**
 
-A Python toolkit for preprocessing intracranial Local Field Potential (LFP) data with specific safeguards for preserving Delta-band (0.5–4 Hz) neural oscillations during EKG artifact removal. Originally translated from a Medtronic QRST template subtraction MATLAB script, this implementation adds critical protections against Delta destruction that are necessary for single-channel deep brain recordings.
+A Python toolkit for preprocessing intracranial Local Field Potential (LFP) data with specific safeguards for preserving  neural oscillations during EKG artifact removal. 
 
 
 ## Framework
@@ -123,15 +123,6 @@ After running on a new dataset, verify:
 5.  **Reconstructed mask**: Should exactly match dead mask when `reconstruct_dead=True`
 
 
-## Architecture Notes
-
-### Three Delta Safeguards Explained
-
-1.  **Zero baseline offset**: The original MATLAB code fits `scale × template + offset`. The offset absorbs slow neural drift under each heartbeat. With 80+ subtractions, this cumulatively removes ~40% of Delta power. Forcing offset to 0.0 eliminates this.
-
-2.  **T-wave disabled**: The T-wave is a slow deflection occupying 0.5–4 Hz. Subtracting it directly removes neural Delta. The QRS complex (>4 Hz) contains minimal Delta energy and can be safely subtracted alone.
-
-3.  **QRS template high-pass filtering**: Averaging heartbeat-aligned windows embeds any cardiac-phase-coupled neural Delta into the template. A 4 Hz zero-phase high-pass filter removes this embedded Delta while preserving QRS morphology.
 
 ### Spectral Reconstruction vs. Interpolation
 
