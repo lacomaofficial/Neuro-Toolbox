@@ -1,7 +1,7 @@
 # iMat: A Toolkit for Extracting Matlab Files in Python
 
 
-<b>
+<br>
   
 ## Overview
 
@@ -13,7 +13,8 @@ The toolkit handles common challenges in clinical iEEG data, including NaN inter
 
 
 
-<b>
+<br>
+
 
 ## Quick Start
 
@@ -126,7 +127,7 @@ metrics = compute_quality_metrics(data, sfreq)
 - `beta_theta_ratio`: Ratio of beta to theta power
 
 
-<b>
+<br>
 
 ## Example Workflows
 
@@ -162,7 +163,7 @@ example_rcs_extraction()
 ```
 
 
-<b>
+<br>
 
 ## Key Features
 
