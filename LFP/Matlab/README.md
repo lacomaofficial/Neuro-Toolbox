@@ -256,4 +256,4 @@ example_rcs_extraction()
 - Automatically handled by `extract_rcs_data()`
 - Warning message indicates truncation occurred
 
----
+
