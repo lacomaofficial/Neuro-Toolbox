@@ -23,7 +23,6 @@ Dead segment detection improvements:
     - Morphological closing merges nearby detections (<1.0s apart)
     - Minimum duration filter avoids false positives from brief neural silences
 
-This module does NOT plot. Use viz_lfp.py for visualization.
 """
 
 from __future__ import annotations
